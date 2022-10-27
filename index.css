@@ -8,7 +8,7 @@
   text-shadow: 2px 5px 5px #2f3542; word-spacing: 10px;
   margin: 20px 20px 20px 20px;
   text-justify: center;
-  font-size: 26pt;
+  font-size: 25px;
   font-style: bold;
   text-align: center;
   color: whitesmoke;
@@ -17,9 +17,7 @@
   box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
   font-family: 'Ubuntu', sans-serif;
 }
-.input{
-    
-}
+
 .scorecard{
   background-color:#905E96;
   border-radius: 10px;
