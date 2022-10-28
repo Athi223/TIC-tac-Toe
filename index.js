@@ -7,7 +7,7 @@ function play(x)
     count++;
     if(count%2!=0)
     {
-        document.getElementById(x).style.backgroundImage ="url(https://toppng.com/uploads/preview/wrong-cross-symbol-11562969015bvubqupjq3.png)";
+        document.getElementById(x).style.backgroundImage ="url(https://www.transparentpng.com/thumb/red-cross/dU1a5L-flag-x-mark-clip-art-computer-icons.png)";
         document.getElementById("score").innerHTML="PLAYER  1  TURN";
         arrx[x]=2;
         arro[x]=null;
