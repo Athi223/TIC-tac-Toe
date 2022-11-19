@@ -1,29 +1,33 @@
-var count=-1;
+var count=0;
 var x;
 const arro=[];
 const arrx=[];
+var  Enabled=true;
 function play(x)
-{
-    count++;
+{   if(Enabled==true){
+   
     if(count%2!=0)
-    {
-        document.getElementById(x).style.backgroundImage ="url(https://toppng.com/uploads/preview/wrong-cross-symbol-11562969015bvubqupjq3.png)";
+    { 
+          if(arro[x]!=1){
+            count++;
+        document.getElementById(x).style.backgroundImage ="url(assests/circle.png)";
         document.getElementById("score").innerHTML="PLAYER  1  TURN";
         arrx[x]=2;
         arro[x]=null;
-        console.log(arrx[x]+" "+x);
+    }
         
     }
     else
-    {
-        document.getElementById(x).style.backgroundImage="url(https://www.transparentpng.com/thumb/red-circle/empty-middle-thick-red-circle-transparent-background-64GGHf.png)"
+    {   if(arrx[x]!=2){
+        count++;
+        document.getElementById(x).style.backgroundImage="url(assests/cross.png)"
         document.getElementById("score").innerHTML="PLAYER  2  TURN";
         arro[x]=1;
         arrx[x]=null;
-       console.log(arro[x]+" "+x);
+    }
     }
    win(); 
-
+}
     
 }
 
@@ -38,8 +42,7 @@ function reset()
        }
        document.getElementById("score").innerHTML="PLAYER  1  TURN";
        document.getElementById("show").style.display="none";
-       
-       
+       Enabled=true;
 }
 function reset_b()
 {
@@ -58,8 +61,9 @@ function Var_reset()
     {
         arro[i]=null;
         arrx[i]=null;
-        count=-1;
-    }
+        count=0;
+    } 
+
 }
 
 function win()
@@ -67,6 +71,7 @@ function win()
     if(arro[1]==arro[2]&&arro[2]==arro[3]&&arro[3]==1)
     {
         document.getElementById("score").innerHTML="PLAYER  1  WIN O";
+        Enabled=false;
         win_showo();
         Var_reset();
     }
@@ -74,6 +79,7 @@ function win()
     if(arrx[1]==arrx[2]&&arrx[2]==arrx[3]&&arrx[3]==2)
     {
         document.getElementById("score").innerHTML="PLAYER  2  WIN X";
+        Enabled=false;
         win_showx();
         Var_reset();
     }
@@ -81,6 +87,7 @@ function win()
     if(arro[4]==arro[5]&&arro[5]==arro[6]&&arro[6]==1)
     {
         document.getElementById("score").innerHTML="PLAYER  1  WIN O";
+        Enabled=false;
         win_showo();
         Var_reset();
     }
@@ -89,6 +96,7 @@ function win()
     if(arrx[4]==arrx[5]&&arrx[5]==arrx[6]&&arrx[6]==2)
     {
         document.getElementById("score").innerHTML="PLAYER  2  WIN X";
+        Enabled=false;
         win_showx();
         Var_reset();
     }
@@ -96,6 +104,7 @@ function win()
     if(arro[7]==arro[8]&&arro[8]==arro[9]&&arro[9]==1)
     {
         document.getElementById("score").innerHTML="PLAYER  1  WIN O";
+        Enabled=false;
         win_showo();
         Var_reset();
     }
@@ -104,6 +113,7 @@ function win()
     if(arrx[7]==arrx[8]&&arrx[8]==arrx[9]&&arrx[9]==2)
     {
         document.getElementById("score").innerHTML="PLAYER  2  WIN X";
+        Enabled=false;
         win_showx();
         Var_reset();
     }
@@ -111,6 +121,7 @@ function win()
     if(arro[1]==arro[4]&&arro[4]==arro[7]&&arro[7]==1)
     {
         document.getElementById("score").innerHTML="PLAYER  1  WIN O";
+        Enabled=false;
         win_showo();
         Var_reset();
     }
@@ -119,6 +130,7 @@ function win()
     if(arrx[1]==arrx[4]&&arrx[4]==arrx[7]&&arrx[7]==2)
     {
         document.getElementById("score").innerHTML="PLAYER  2  WIN X";
+        Enabled=false;
         win_showx();
         Var_reset();
     }
@@ -126,6 +138,7 @@ function win()
     if(arro[2]==arro[5]&&arro[5]==arro[8]&&arro[8]==1)
     {
         document.getElementById("score").innerHTML="PLAYER  1  WIN O";
+        Enabled=false;
         win_showo();
         Var_reset();
     }
@@ -134,6 +147,7 @@ function win()
     if(arrx[2]==arrx[5]&&arrx[5]==arrx[8]&&arrx[8]==2)
     {
         document.getElementById("score").innerHTML="PLAYER  2  WIN X";
+        Enabled=false;
         win_showx();
         Var_reset();
     }
@@ -141,6 +155,7 @@ function win()
     if(arro[3]==arro[6]&&arro[6]==arro[9]&&arro[9]==1)
     {
         document.getElementById("score").innerHTML="PLAYER  1  WIN O";
+        Enabled=false;
         win_showo();
         Var_reset();
     }
@@ -149,6 +164,7 @@ function win()
     if(arrx[3]==arrx[6]&&arrx[6]==arrx[9]&&arrx[9]==2)
     {
         document.getElementById("score").innerHTML="PLAYER  2  WIN X";
+        Enabled=false;
         win_showx();
         Var_reset();
     }
@@ -156,6 +172,7 @@ function win()
     if(arro[1]==arro[5]&&arro[5]==arro[9]&&arro[9]==1)
     {
         document.getElementById("score").innerHTML="PLAYER  1  WIN O";
+        Enabled=false;
         win_showo();
         Var_reset();
     }
@@ -164,6 +181,7 @@ function win()
     if(arrx[1]==arrx[5]&&arrx[5]==arrx[9]&&arrx[9]==2)
     {
         document.getElementById("score").innerHTML="PLAYER  2  WIN X";
+        Enabled=false;
         win_showx();
         Var_reset();
     }
@@ -171,6 +189,7 @@ function win()
     if(arro[3]==arro[5]&&arro[5]==arro[7]&&arro[7]==1)
     {
         document.getElementById("score").innerHTML="PLAYER  1  WIN O";
+        Enabled=false;
         win_showo();
         Var_reset();
     }
@@ -179,6 +198,7 @@ function win()
     if(arrx[3]==arrx[5]&&arrx[5]==arrx[7]&&arrx[7]==2)
     {
         document.getElementById("score").innerHTML="PLAYER  2  WIN X";
+        Enabled=false;
         win_showx();
         Var_reset();
     }
@@ -189,6 +209,7 @@ function win()
         document.getElementById("show").innerHTML="MATCH  TIE  (PRESS RESET)";
         document.getElementById("show").style.display="block";
         reset_b();
+        Var_reset();
     }
   
 }
@@ -196,6 +217,7 @@ function win_showx()
 {
     document.getElementById("show").innerHTML="PLAYER  WIN   X  (PRESS RESET)";
     document.getElementById("show").style.display="block";
+    Enabled=false;
     
     
 }
@@ -204,6 +226,6 @@ function win_showo()
 {
     document.getElementById("show").innerHTML="PLAYER  WIN   O  (PRESS RESET)";
     document.getElementById("show").style.display="block";
-    
+    Enabled=false;
     
 }
