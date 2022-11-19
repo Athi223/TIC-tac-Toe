@@ -4,7 +4,8 @@ const arro=[];
 const arrx=[];
 var  Enabled=true;
 function play(x)
-{   if(Enabled==true){
+{  document.getElementById("show").style.display="none";
+      if(Enabled==true){
    
     if(count%2!=0)
     { 
@@ -70,7 +71,7 @@ function win()
 {
     if(arro[1]==arro[2]&&arro[2]==arro[3]&&arro[3]==1)
     {
-        document.getElementById("score").innerHTML="PLAYER  1  WIN O";
+        document.getElementById("score").innerHTML="PLAYER  1  WIN X";
         Enabled=false;
         win_showo();
         Var_reset();
@@ -86,7 +87,7 @@ function win()
 
     if(arro[4]==arro[5]&&arro[5]==arro[6]&&arro[6]==1)
     {
-        document.getElementById("score").innerHTML="PLAYER  1  WIN O";
+        document.getElementById("score").innerHTML="PLAYER  1  WIN X";
         Enabled=false;
         win_showo();
         Var_reset();
@@ -103,7 +104,7 @@ function win()
 
     if(arro[7]==arro[8]&&arro[8]==arro[9]&&arro[9]==1)
     {
-        document.getElementById("score").innerHTML="PLAYER  1  WIN O";
+        document.getElementById("score").innerHTML="PLAYER  1  WIN X";
         Enabled=false;
         win_showo();
         Var_reset();
@@ -120,7 +121,7 @@ function win()
 
     if(arro[1]==arro[4]&&arro[4]==arro[7]&&arro[7]==1)
     {
-        document.getElementById("score").innerHTML="PLAYER  1  WIN O";
+        document.getElementById("score").innerHTML="PLAYER  1  WIN X";
         Enabled=false;
         win_showo();
         Var_reset();
@@ -137,7 +138,7 @@ function win()
 
     if(arro[2]==arro[5]&&arro[5]==arro[8]&&arro[8]==1)
     {
-        document.getElementById("score").innerHTML="PLAYER  1  WIN O";
+        document.getElementById("score").innerHTML="PLAYER  1  WIN X";
         Enabled=false;
         win_showo();
         Var_reset();
@@ -154,7 +155,7 @@ function win()
 
     if(arro[3]==arro[6]&&arro[6]==arro[9]&&arro[9]==1)
     {
-        document.getElementById("score").innerHTML="PLAYER  1  WIN O";
+        document.getElementById("score").innerHTML="PLAYER  1  WIN X";
         Enabled=false;
         win_showo();
         Var_reset();
@@ -171,7 +172,7 @@ function win()
 
     if(arro[1]==arro[5]&&arro[5]==arro[9]&&arro[9]==1)
     {
-        document.getElementById("score").innerHTML="PLAYER  1  WIN O";
+        document.getElementById("score").innerHTML="PLAYER  1  WIN X";
         Enabled=false;
         win_showo();
         Var_reset();
@@ -188,7 +189,7 @@ function win()
 
     if(arro[3]==arro[5]&&arro[5]==arro[7]&&arro[7]==1)
     {
-        document.getElementById("score").innerHTML="PLAYER  1  WIN O";
+        document.getElementById("score").innerHTML="PLAYER  1  WIN X";
         Enabled=false;
         win_showo();
         Var_reset();
@@ -215,7 +216,7 @@ function win()
 }
 function win_showx()
 {
-    document.getElementById("show").innerHTML="PLAYER  WIN   X  (PRESS RESET)";
+    document.getElementById("show").innerHTML="PLAYER  WIN   O (PRESS RESET)";
     document.getElementById("show").style.display="block";
     Enabled=false;
     
@@ -224,7 +225,7 @@ function win_showx()
 
 function win_showo()
 {
-    document.getElementById("show").innerHTML="PLAYER  WIN   O  (PRESS RESET)";
+    document.getElementById("show").innerHTML="PLAYER  WIN   X  (PRESS RESET)";
     document.getElementById("show").style.display="block";
     Enabled=false;
     
