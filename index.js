@@ -1,4 +1,4 @@
-var count=0;
+var count=-1;
 var x;
 const arro=[];
 const arrx=[];
@@ -6,15 +6,16 @@ var  Enabled=true;
 function play(x)
 {  document.getElementById("show").style.display="none";
       if(Enabled==true){
-   
-    if(count%2!=0)
-    { 
+  
+    if(count%2==0)
+    {   
           if(arro[x]!=1){
             count++;
         document.getElementById(x).style.backgroundImage ="url(assests/circle.png)";
         document.getElementById("score").innerHTML="PLAYER  1  TURN";
         arrx[x]=2;
         arro[x]=null;
+        console.log("uppppp");
     }
         
     }
@@ -25,9 +26,12 @@ function play(x)
         document.getElementById("score").innerHTML="PLAYER  2  TURN";
         arro[x]=1;
         arrx[x]=null;
+        console.log("downnnn");
     }
+   
     }
    win(); 
+   
 }
     
 }
@@ -62,7 +66,7 @@ function Var_reset()
     {
         arro[i]=null;
         arrx[i]=null;
-        count=0;
+        count=-1;
     } 
 
 }
@@ -79,7 +83,7 @@ function win()
     
     if(arrx[1]==arrx[2]&&arrx[2]==arrx[3]&&arrx[3]==2)
     {
-        document.getElementById("score").innerHTML="PLAYER  2  WIN X";
+        document.getElementById("score").innerHTML="PLAYER  2  WIN O";
         Enabled=false;
         win_showx();
         Var_reset();
@@ -96,7 +100,7 @@ function win()
     
     if(arrx[4]==arrx[5]&&arrx[5]==arrx[6]&&arrx[6]==2)
     {
-        document.getElementById("score").innerHTML="PLAYER  2  WIN X";
+        document.getElementById("score").innerHTML="PLAYER  2  WIN O";
         Enabled=false;
         win_showx();
         Var_reset();
@@ -113,7 +117,7 @@ function win()
     
     if(arrx[7]==arrx[8]&&arrx[8]==arrx[9]&&arrx[9]==2)
     {
-        document.getElementById("score").innerHTML="PLAYER  2  WIN X";
+        document.getElementById("score").innerHTML="PLAYER  2  WIN O";
         Enabled=false;
         win_showx();
         Var_reset();
@@ -130,24 +134,10 @@ function win()
     
     if(arrx[1]==arrx[4]&&arrx[4]==arrx[7]&&arrx[7]==2)
     {
-        document.getElementById("score").innerHTML="PLAYER  2  WIN X";
+        document.getElementById("score").innerHTML="PLAYER  2  WIN O";
         Enabled=false;
         win_showx();
         Var_reset();
-    }
-
-    if(arro[2]==arro[5]&&arro[5]==arro[8]&&arro[8]==1)
-    {
-        document.getElementById("score").innerHTML="PLAYER  1  WIN X";
-        Enabled=false;
-        win_showo();
-        Var_reset();
-    }
-
-    
-    if(arrx[2]==arrx[5]&&arrx[5]==arrx[8]&&arrx[8]==2)
-    {
-        document.getElementById("score").innerHTML="PLAYER  2  WIN X";
         Enabled=false;
         win_showx();
         Var_reset();
@@ -164,7 +154,7 @@ function win()
     
     if(arrx[3]==arrx[6]&&arrx[6]==arrx[9]&&arrx[9]==2)
     {
-        document.getElementById("score").innerHTML="PLAYER  2  WIN X";
+        document.getElementById("score").innerHTML="PLAYER  2  WIN O";
         Enabled=false;
         win_showx();
         Var_reset();
@@ -181,7 +171,7 @@ function win()
     
     if(arrx[1]==arrx[5]&&arrx[5]==arrx[9]&&arrx[9]==2)
     {
-        document.getElementById("score").innerHTML="PLAYER  2  WIN X";
+        document.getElementById("score").innerHTML="PLAYER  2  WIN O";
         Enabled=false;
         win_showx();
         Var_reset();
@@ -198,7 +188,7 @@ function win()
     
     if(arrx[3]==arrx[5]&&arrx[5]==arrx[7]&&arrx[7]==2)
     {
-        document.getElementById("score").innerHTML="PLAYER  2  WIN X";
+        document.getElementById("score").innerHTML="PLAYER  2  WIN O";
         Enabled=false;
         win_showx();
         Var_reset();
